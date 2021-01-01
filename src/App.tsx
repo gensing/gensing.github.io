@@ -23,8 +23,7 @@ function App() {
     <Layout>
       <Switch>
         <Route path="/error" render={() => <div>error</div>} />
-        <Route path="/article/:id" render={() => <DetailPage />} />
-        <Route path="/article/" render={() => <ListPage />} />
+        <Route path="/:id" render={() => <DetailPage />} />
         <Route path="/" render={() => <ListPage />} />
         <Route render={() => <div>not found</div>} />
       </Switch>
