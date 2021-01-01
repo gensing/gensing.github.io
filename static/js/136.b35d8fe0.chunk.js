@@ -1,0 +1,2 @@
+(this["webpackJsonpgs-pages"]=this["webpackJsonpgs-pages"]||[]).push([[136],{218:function(e,s){Prism.languages.gcode={comment:/;.*|\B\(.*?\)\B/,string:{pattern:/"(?:""|[^"])*"/,greedy:!0},keyword:/\b[GM]\d+(?:\.\d+)?\b/,property:/\b[A-Z]/,checksum:{pattern:/\*\d+/,alias:"punctuation"},punctuation:/:/}}}]);
+//# sourceMappingURL=136.b35d8fe0.chunk.js.map
