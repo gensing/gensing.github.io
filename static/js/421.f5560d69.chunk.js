@@ -1,2 +1,0 @@
-(this["webpackJsonpgs-pages"]=this["webpackJsonpgs-pages"]||[]).push([[421],{507:function(s,a){var e=Prism.util.clone(Prism.languages.typescript);Prism.languages.tsx=Prism.languages.extend("jsx",e)}}]);
-//# sourceMappingURL=421.f5560d69.chunk.js.map

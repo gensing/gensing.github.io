@@ -1,2 +1,0 @@
-(this["webpackJsonpgs-pages"]=this["webpackJsonpgs-pages"]||[]).push([[145],{231:function(m,s){Prism.languages.git={comment:/^#.*/m,deleted:/^[-\u2013].*/m,inserted:/^\+.*/m,string:/("|')(?:\\.|(?!\1)[^\\\r\n])*\1/m,command:{pattern:/^.*\$ git .*$/m,inside:{parameter:/\s--?\w+/m}},coord:/^@@.*@@$/m,commit_sha1:/^commit \w{40}$/m}}}]);
-//# sourceMappingURL=145.058ee124.chunk.js.map

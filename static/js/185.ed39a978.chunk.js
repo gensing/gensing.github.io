@@ -1,2 +1,0 @@
-(this["webpackJsonpgs-pages"]=this["webpackJsonpgs-pages"]||[]).push([[185],{271:function(t,s){Prism.languages.ini={comment:/^[ \t]*[;#].*$/m,selector:/^[ \t]*\[.*?\]/m,constant:/^[ \t]*[^\s=]+?(?=[ \t]*=)/m,"attr-value":{pattern:/=.*/,inside:{punctuation:/^[=]/}}}}}]);
-//# sourceMappingURL=185.ed39a978.chunk.js.map
