@@ -1,0 +1,2 @@
+(this["webpackJsonpgs-pages"]=this["webpackJsonpgs-pages"]||[]).push([[171],{257:function(a,s){Prism.languages.hsts={directive:{pattern:/\b(?:max-age=|includeSubDomains|preload)/,alias:"keyword"},safe:{pattern:/\b\d{8,}\b/,alias:"selector"},unsafe:{pattern:/\b\d{1,7}\b/,alias:"function"}}}}]);
+//# sourceMappingURL=171.9793b230.chunk.js.map
