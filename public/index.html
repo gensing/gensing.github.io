@@ -23,6 +23,17 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
+   
+    <script >
+      (function(l) {
+        // 파싱 결과를 토대로 URI 내용을 대체한다
+        var queryString = l.search;
+        var urlParams = new URLSearchParams(queryString);
+        var p = urlParams.get('p');  
+        window.history.replaceState(null, null,p);
+      }(window.location))
+    </script>
+    
     <title>React App</title>
   </head>
   <body>
