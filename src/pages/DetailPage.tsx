@@ -1,8 +1,8 @@
 import React from "react";
-import { Link, useHistory, useParams } from "react-router-dom";
-import MarkdownPreview from "@uiw/react-markdown-preview";
+import { useHistory, useParams } from "react-router-dom";
 import fm from "front-matter";
 import useMarkDown from "../hooks/useMarkDown";
+import Detail from "../components/templates/organisms/Detail";
 
 export default function MarkDownPage() {
   let { id } = useParams<{ id: string }>();
@@ -17,10 +17,5 @@ export default function MarkDownPage() {
     fetchMarkDown(id);
   }, [id, fetchMarkDown]);
 
-  return (
-    <>
-      <MarkdownPreview source={fm(source).body} />
-      <Link to={`/`}>list</Link>
-    </>
-  );
+  return <Detail source={fm(source).body} />;
 }
