@@ -1,6 +1,6 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
-import { Layout } from "./components/templates/organisms/Layout";
+import { Layout } from "./components/UI/layouts/MainLayout";
 import DetailPage from "./pages/DetailPage";
 import ListPage from "./pages/ListPage";
 

@@ -17,9 +17,9 @@ const ColorLink = styled(Link)`
   text-decoration: none;
 `;
 
-export default function Header() {
+export default function Header(props: { style?: React.CSSProperties }) {
   return (
-    <StyledHeader>
+    <StyledHeader {...props}>
       <h1>
         <ColorLink to="/">Gensing Github Blog</ColorLink>
       </h1>

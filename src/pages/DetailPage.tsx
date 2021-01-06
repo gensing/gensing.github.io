@@ -2,7 +2,7 @@ import React from "react";
 import { useHistory, useParams } from "react-router-dom";
 import fm from "front-matter";
 import useMarkDown from "../hooks/useMarkDown";
-import Detail from "../components/templates/organisms/Detail";
+import Detail from "../components/UI/contents/Detail";
 
 export default function MarkDownPage() {
   let { id } = useParams<{ id: string }>();

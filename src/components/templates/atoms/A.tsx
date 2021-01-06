@@ -1,21 +1,28 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-const Button = styled.button`
+const LinkButton = styled(Link)`
   display: inline-block;
-  background-color: #87ceeb;
-  padding: 10px 30px;
-  margin: 2px;
-  border: none;
-  color: black;
+
+  background-color: #5cb85c;
+  padding: 6px 20px;
+  margin: 1em;
+  border: 1px solid palevioletred;
+  border-radius: 4px;
+
+  color: white;
+  font-size: 1em;
+  font-weight: 400;
   text-align: center;
-  text-decoration: none;
-  font-size: 16px;
+  vertical-align: middle;
+  white-space: nowrap;
+
   cursor: pointer;
   transition-duration: 0.4s;
+
   &:hover {
-    background-color: white;
-    color: black;
+    background-color: #449d44;
   }
 `;
 
-export default Button;
+export default LinkButton;

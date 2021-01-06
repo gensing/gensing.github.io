@@ -6,10 +6,10 @@ const StyledFooter = styled.footer`
   width: 100%;
   height: 100px;
   padding: 45px;
-  margin: 0 auto;
   border-top: 1px solid #e1e4e8;
   background-color: black;
   color: white;
+  margin: 0 auto;
 `;
 
 export default function Footer() {

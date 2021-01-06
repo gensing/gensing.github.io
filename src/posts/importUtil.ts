@@ -22,6 +22,12 @@ export const fetchMd = (id: string) => {
     const result = list.filter((i) => i.name == id);
     return new Promise<string>((resolve, reject) => {
         if (result.length == 0) reject("not found")
-        result.map((i) => fetch(i.staticUrl).then((resp) => resolve(resp.text())).catch(reject));
+        result.map((i) => fetch(i.staticUrl, {
+            method: "get",
+            headers: {
+                Accept: "application/octet-stream",
+                "Content-Type": "application/octet-stream",
+            },
+        }).then((resp) => resolve(resp.text())).catch(reject));
     })
 }
