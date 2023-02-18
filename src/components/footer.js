@@ -3,13 +3,14 @@ import * as React from "react"
 const Footer = ({ siteTitle }) => (
   <footer
     style={{
-      marginTop: `var(--space-5)`,
-      fontSize: `var(--font-sm)`,
+      maxWidth: `1280px`,
+      height: `84px`,
+      padding: `20px`,
+      margin: `0 auto`,
+      fontSize: `var(--font-sm)`
     }}
   >
-    © {new Date().getFullYear()} &middot; Built with
-    {` `}
-    <a href="https://github.com/gensing">gensing github</a>
+    <p>Copyright © 2023 Gensing</p>
   </footer>
 )
 

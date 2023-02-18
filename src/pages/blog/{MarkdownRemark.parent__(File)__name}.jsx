@@ -6,6 +6,9 @@ import Layout from "../../components/layout"
 export default function BlogPostTemplate({
   data, // this prop will be injected by the GraphQL query below.
 }) {
+
+  //{MarkdownRemark.parent__(File)__name}
+  //{markdownRemark.frontmatter__slug}
   
   const { markdownRemark } = data // data.markdownRemark holds your post data
   const { frontmatter, html } = markdownRemark
@@ -28,7 +31,6 @@ export const pageQuery = graphql`
       html
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
-        slug
         title
       }
     }
