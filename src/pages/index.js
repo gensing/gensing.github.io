@@ -1,38 +1,30 @@
 import * as React from "react"
 import { Link, graphql, useStaticQuery} from "gatsby"
 import slugify from "slugify"
-
-
-
 import Layout from "../components/layout"
-
-
-const PostItem = ({ node: { parent: { name }, frontmatter: { title, categorie, date } } }) => {
-
-  return (
-    <li>
-        {date} - {categorie} - <Link to={`/blog/${slugify(name, { lower: true, strict:true })}/`}>{title}</Link>
-    </li>
-  )
-}
 
 const IndexPage = () => {
   
-  const { allMarkdownRemark : {nodes} } = useStaticQuery(graphql`
+  const { allMarkdownRemark : {group} } = useStaticQuery(graphql`
     query MyQuery {
       allMarkdownRemark(sort: { order: DESC, fields: frontmatter___date }) {
-        nodes {
-          parent {
-            ... on File {
-              name
+        totalCount
+        group(field: {frontmatter: {categorie: SELECT}}) {
+          fieldValue
+          totalCount
+          nodes {
+            parent {
+              ... on File {
+                name
+              }
+            }
+            frontmatter {
+              title
+              categorie
+              date(formatString: "YY.MM.DD")
             }
           }
-          frontmatter {
-            title
-            categorie
-            date(formatString: "YY.MM.DD")
-          }
-        }
+        } 
       }
     }`
   )
@@ -40,14 +32,21 @@ const IndexPage = () => {
   return (
     <Layout>
       <h1>Home</h1>
-      <ul>
-        {nodes.map(node => <PostItem node={node}/>)}
-      </ul>
+      { 
+        group.map(({fieldValue, nodes}) => 
+        <div>
+          <h3>{fieldValue}</h3>
+          { nodes.map(({ parent: { name }, frontmatter: { title, categorie, date } }) => 
+            <ul>
+              <li>
+                {date} - {categorie} - <Link to={`/blog/${slugify(name, { lower: true, strict:true })}/`}>{title}</Link>
+              </li>
+            </ul>
+          )}
+        </div>
+      )}
     </Layout>
   )
 }
-
-
-
 
 export default IndexPage
