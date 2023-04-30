@@ -6,14 +6,35 @@ data-styled.g2[id="layout__HeaderArea-sc-ii2kc2-1"]{content:"bbcsEh,"}/*!sc*/
 data-styled.g3[id="layout__MainArea-sc-ii2kc2-2"]{content:"dTNRbi,"}/*!sc*/
 .cJvDzX{grid-area:footer;background-color:#f2f3f3;}/*!sc*/
 data-styled.g4[id="layout__FooterArea-sc-ii2kc2-3"]{content:"cJvDzX,"}/*!sc*/
-</style></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="layout__GridContainer-sc-ii2kc2-0 fMVqfn"><header class="layout__HeaderArea-sc-ii2kc2-1 bbcsEh"><header style="margin:0 auto;padding:var(--space-4) var(--size-gutter);display:flex;align-items:center;justify-content:space-between;background-color:#161b22"><a style="font-size:18px;text-decoration:none;color:white;font-style:italic" href="/">Gensing blog</a></header></header><main class="layout__MainArea-sc-ii2kc2-2 dTNRbi"><div style="border-bottom:1px solid #e1e4e8;padding-bottom:10px"><h1 style="margin:0px 0px 10px 0px">sample1</h1><span>February 18, 2023</span></div><div style="margin:20px"><p>sample1 md</p>
-<pre><code>function test() {
-  console.log("sample1");
-}
-</code></pre></div></main><footer class="layout__FooterArea-sc-ii2kc2-3 cJvDzX"><footer style="max-width:1280px;height:84px;padding:20px;margin:0 auto;font-size:var(--font-sm)"><p>Copyright © 2023 Gensing</p></footer></footer></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/blog/sample1/";/*]]>*/</script><!-- slice-start id="_gatsby-scripts-1" -->
+</style></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div class="layout__GridContainer-sc-ii2kc2-0 fMVqfn"><header class="layout__HeaderArea-sc-ii2kc2-1 bbcsEh"><header style="margin:0 auto;padding:var(--space-4) var(--size-gutter);display:flex;align-items:center;justify-content:space-between;background-color:#161b22"><a style="font-size:18px;text-decoration:none;color:white;font-style:italic" href="/">Gensing blog</a></header></header><main class="layout__MainArea-sc-ii2kc2-2 dTNRbi"><div style="border-bottom:1px solid #e1e4e8;padding-bottom:10px"><h1 style="margin:0px 0px 10px 0px">WebRTC</h1><span>April 30, 2023</span></div><div style="margin:20px"><h1>WebRTC</h1>
+<ul>
+<li>웹 브라우저 간에 플러그인의 도움 없이 서로 통신할 수 있도록 설계된 API.</li>
+<li>음성 통화, 영상 통화, P2P 파일 공유 등으로 활용될 수 있다.</li>
+<li>시그널링 과정 -> P2P 연결 -> 데이타 통신 과정으로 수행된다.</li>
+<li>시그널링 과정에 TURN, STRUN 서버가 필요하다.</li>
+<li>Mesh, SFU, MCU 방식의 통신 구조를 사용한다.</li>
+<li>SFU, MUC 방식은 미디어 서버가 필요하다.</li>
+</ul>
+<h1>시그널링</h1>
+<ul>
+<li>WebRTC API 를 이용하여 통신을 하기 위해서는 SDP, ICE Candidate 정보가 필요하다. 해당 정보를 구하는 과정이 시그널링 과정이다.</li>
+<li>시그널링 서버는 직접 구현해야하며, Socket 통신으로 구현하는 것을 추천한다.</li>
+<li>Mesh, SFU, MCU 의 통신 구조나, 1:1, 1:N, N:M 방식의 서비스 구조에 따른 서버 코드를 작성하면 된다.</li>
+<li>추 후 클라이언트 통제는, 시그널링 서버로 연결된 소켓 통신을 이용하건, 시그널링 서버에 관리 처리한 미디어 서버의 endpoint 정보를 이용하여 통제한다.</li>
+</ul>
+<h1>P2P 연결</h1>
+<ul>
+<li>시그널링 과정에서 구해진 정보를 이용하여 피어간 P2P 연결을 한다.</li>
+<li>이 후 통신은 Point to Point 연결된 peer 끼리 통신을 주고 받는다. ( 데이타 통신에 시그널링 서버는 관연하지 않는다는 것 )</li>
+</ul>
+<h1>외부 솔루션</h1>
+<ul>
+<li>Kurento media server : WebRTC 특화 미디어 서버</li>
+<li>CoTurn server : turn, sturn 서버</li>
+</ul></div></main><footer class="layout__FooterArea-sc-ii2kc2-3 cJvDzX"><footer style="max-width:1280px;height:84px;padding:20px;margin:0 auto;font-size:var(--font-sm)"><p>Copyright © 2023 Gensing</p></footer></footer></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/blog/webrtc/";/*]]>*/</script><!-- slice-start id="_gatsby-scripts-1" -->
           <script
             id="gatsby-chunk-mapping"
           >
-            window.___chunkMapping="{\"app\":[\"/app-846a71ce24ec3b9cc0ba.js\"],\"component---src-pages-404-js\":[\"/component---src-pages-404-js-2569451d4cec6d4214a8.js\"],\"component---src-pages-blog-markdown-remark-parent-file-name-jsx\":[\"/component---src-pages-blog-markdown-remark-parent-file-name-jsx-04f61f106edde4f882a0.js\"],\"component---src-pages-index-js\":[\"/component---src-pages-index-js-960a99206a6cea4a641c.js\"]}";
+            window.___chunkMapping="{\"app\":[\"/app-663dc22b4334e0144eb2.js\"],\"component---src-pages-404-js\":[\"/component---src-pages-404-js-443bc1e312e84c72d102.js\"],\"component---src-pages-blog-markdown-remark-parent-file-name-jsx\":[\"/component---src-pages-blog-markdown-remark-parent-file-name-jsx-de9c5759c83887699453.js\"],\"component---src-pages-index-js\":[\"/component---src-pages-index-js-8c4b3980c1a9cc520bbc.js\"]}";
           </script>
-        <script>window.___webpackCompilationHash="69094047132645195aea";</script><script src="/webpack-runtime-9059d223a7a7daf720aa.js" async></script><script src="/framework-a4e155cd0476dc1ca208.js" async></script><script src="/app-846a71ce24ec3b9cc0ba.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
+        <script>window.___webpackCompilationHash="6bd5c8aabf718b7cd12d";</script><script src="/webpack-runtime-e12842088f409d5b8af7.js" async></script><script src="/framework-787fd431ec0dd40ea4dc.js" async></script><script src="/app-663dc22b4334e0144eb2.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
